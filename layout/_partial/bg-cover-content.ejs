@@ -14,14 +14,25 @@
                 <span id="subtitle"></span>
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
+                    $.get('https://sslapi.hitokoto.cn/?c=a', function (data) {
+                    if (typeof data === 'string') data = JSON.parse(data);
                     var typed = new Typed("#subtitle", {
-                        strings: ['<%= theme.subtitle.sub1 %>','<%= theme.subtitle.sub2 %>'],
+                        strings: [data.hitokoto, '--' + data.from],
                         startDelay: <%= theme.subtitle.startDelay %>,
                         typeSpeed: <%= theme.subtitle.typeSpeed %>,
                         loop: <%= theme.subtitle.loop %>,
                         backSpeed: <%= theme.subtitle.backSpeed %>,
                         showCursor: <%= theme.subtitle.showCursor %>
                     });
+                    });
+                    // var typed = new Typed("#subtitle", {
+                    //     strings: ['<%= theme.subtitle.sub1 %>','<%= theme.subtitle.sub2 %>'],
+                    //     startDelay: <%= theme.subtitle.startDelay %>,
+                    //     typeSpeed: <%= theme.subtitle.typeSpeed %>,
+                    //     loop: <%= theme.subtitle.loop %>,
+                    //     backSpeed: <%= theme.subtitle.backSpeed %>,
+                    //     showCursor: <%= theme.subtitle.showCursor %>
+                    // });
                 </script>
                 <% } else { %>
                 <%= config.description %>
