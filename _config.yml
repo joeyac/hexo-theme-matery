@@ -207,7 +207,7 @@ clicklove:
 profile:
   avatar: /medias/avatar.jpg
   career: A Software Engineer in Algorithm Group
-  introduction: If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.
+  introduction: 取得过一些成绩的退役icpc选手，曾在美团、字节跳动工作，现供职于依图。
 
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
